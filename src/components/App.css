@@ -1,0 +1,199 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Light and Dark theme styles */
+  .div.light {
+    background-color: #f3f4f6;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .div.dark {
+    background-color: #1e1e2f;
+    color: #f3f4f6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styling the main container */
+  .div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Toggle button */
+  .toggle-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #ff4b4b;
+    box-shadow: 0 6px 20px rgba(255, 75, 75, 0.7);
+  }
+  
+  /* Input fields */
+  input[type="text"] {
+    padding: 15px;
+    margin: 10px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  }
+  
+  /* Create button */
+  button {
+    background-color: #48c774;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin: 15px 0;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(72, 199, 116, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #36b566;
+    box-shadow: 0 6px 20px rgba(72, 199, 116, 0.7);
+  }
+  
+  /* Task list */
+  ul {
+    list-style-type: none;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+  }
+  
+  li {
+    background-color: white;
+    padding: 20px;
+    margin: 12px 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  li:hover {
+    transform: scale(1.03);
+    background-color: #f0f4f8;
+  }
+  
+  li.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+  }
+  
+  li span {
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  li span:hover {
+    color: #48c774;
+  }
+  
+  /* Delete button */
+  li button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button:hover {
+    background-color: #ff4b4b;
+  }
+  
+  /* Fullscreen container styling */
+  .div {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    input[type="text"], button, .toggle-btn {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    ul {
+      max-width: 90%;
+    }
+  
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    li button {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    input[type="text"], button, .toggle-btn {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    li {
+      padding: 15px;
+    }
+  }
+  
